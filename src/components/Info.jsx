@@ -2,18 +2,25 @@ import React from 'react'
 
 const Info = () => {
   return (
-    <div className='bg-black w-full h-auto flex flex-col pl-4 py-10 text-lg text-white'>
-        <div className='flex pb-5 items-center'>
-            <i className="ti ti-map-pin "></i>
-            <p>Maipu 1966 (Parque Batlle) </p>
+    <div className='bg-black w-full h-auto flex flex-col pt-4 pb-8 text-md text-white'>
+        <h3 className='text-[#009e3a] font-extrabold text-center text-2xl pb-2'>INFORMACIÓN</h3>
+        <div className='flex mb-5 items-center font-semibold h-12 '>
+          <div className=' border-2 border-white rounded-full h-10 w-10 ml-2'>
+            <i className="ti ti-map-pin text-2xl pl-[6px]"></i>
+          </div>
+          <p className='pl-2'>Dirección: Maipú 1966 (Parque Batlle) </p>
         </div>
-        <div className='flex pb-5 items-center'>
-            <i className="ti ti-phone"></i>
-            <p> 098891523 / 098632252</p>
+        <div className='flex mb-5 items-center font-semibold h-12 '>
+          <div className=' border-2 border-white rounded-full h-10 w-10 ml-2'>
+            <i className="ti ti-phone text-2xl pl-[6px]"></i>
+          </div>
+          <p className='pl-2'>Contacto: 098891523 / 098632252</p>
         </div>
-        <div className='flex items-center'>
-            <i className="ti ti-school"></i>    
-            <p>Bruno Ramponi / Martin Salustio</p>
+        <div className='flex items-center font-semibold h-12 '>
+          <div className=' border-2 border-white rounded-full h-10 w-10 ml-2'>
+            <i className="ti ti-school text-2xl  pl-[6px]"></i>  
+          </div>    
+            <p className='pl-2'>Staff: Bruno Ramponi / Martín Salustio</p>
         </div>
         
 
