@@ -2,8 +2,8 @@ import React from 'react'
 
 const Info = () => {
   return (
-    <div className='bg-black w-full h-auto flex flex-col pt-4 pb-8 text-md text-white'>
-        <h3 className='text-[#009e3a] font-extrabold text-center text-2xl pb-2'>INFORMACIÓN</h3>
+    <div className='bg-black w-full h-auto flex pl-2 flex-col pt-8 pb-8 text-md text-white absolut bottom-0 '>
+        <h3 className='text-white font-extrabold text-center text-2xl pb-2'>INFORMACIÓN</h3>
         <div className='flex mb-5 items-center font-semibold h-12 '>
           <div className=' border-2 border-white rounded-full h-10 w-10 ml-2'>
             <i className="ti ti-map-pin text-2xl pl-[6px]"></i>
