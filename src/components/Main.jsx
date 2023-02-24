@@ -18,10 +18,10 @@ const Main = () => {
 
   return (
     <div
-      className="h-[98%] flex flex-col bg-center bg-cover"
+      className="h-screen flex flex-col bg-center bg-cover "
       style={{ backgroundImage: `url("${PicEntrenamiento2}")` }}
     >
-      <h1 className="text-[#009e3a] text-3xl font-extrabold mt-20 mb-10 pl-4 ">
+      <h1 className="text-[#009e3a] text-3xl font-extrabold mt-40 mb-10 pl-4 ">
         ENTRENAMIENTO 360
       </h1>
 
@@ -72,8 +72,7 @@ const Main = () => {
             </p>
           )}
         </button>
-      </div>        
-      <div className='h-48 w-full bg-gradient-to-t from-black to-transparent '></div>       
+      </div>           
     </div>   )
 }
 

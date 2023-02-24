@@ -8,6 +8,7 @@ import {
 import './index.css';
 
 import Home from './pages/Home';
+import Register from './pages/Register';
 
 function App() {
   
@@ -19,8 +20,13 @@ function App() {
           <Route 
             path='/'
             element={<Home />}
-          />
-        </Routes>
+          />   
+          <Route 
+            path='/registro'
+            element={<Register />}  
+            />
+          </Routes>
+        
       </BrowserRouter>
     </div>
   )
