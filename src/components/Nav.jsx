@@ -13,7 +13,9 @@ const Nav = () => {
   return (
     <nav className='fixed flex items-center justify-between w-full h-24 px-4 py-2  bg-black text-white'>
       <div className='flex items-center'>
+        <Link to={`/`}>
         <img className='h-20' src={Logo} alt='Logo' />
+        </Link>
       </div>
       <button
         className='text-3xl hover:text-[#009e3a] focus:outline-none lg:hidden'
@@ -38,7 +40,7 @@ const Nav = () => {
        <Link to={'/'}>
         <li className='py-4'>
           <a href='#' className='text-white hover:text-[#009e3a]'>
-            <i className='ti ti-home '></i>
+            <i className='ti ti-home pr-2'></i>
             Home
           </a>
         </li>
@@ -46,26 +48,26 @@ const Nav = () => {
         <Link to={'/registro'}>
           <li className='py-4'>
             <a href='#' className='text-white hover:text-[#009e3a]'>
-              <i className='ti ti-pencil '></i>
+              <i className='ti ti-pencil pr-2'></i>
               Registro
             </a>
           </li>
         </Link>
         <li className='py-4'>
           <a href='#' className='text-white hover:text-[#009e3a]'>
-            <i className='ti ti-calendar-due'></i>
+            <i className='ti ti-calendar-due pr-2'></i>
             Agenda
           </a>
         </li>
         <li className='py-4'>
           <a href='#' className='text-white hover:text-[#009e3a]'>
-            <i className='ti ti-barbell'></i>
+            <i className='ti ti-barbell pr-2'></i>
             Control de cargas
           </a>
         </li>
         <li className='py-4'>
           <a href='#' className='text-white hover:text-[#009e3a]'>
-            <i className='ti ti-address-book'></i>
+            <i className='ti ti-address-book pr-2'></i>
             Contacto
           </a>
         </li>
