@@ -1,21 +1,3 @@
-// import React from 'react';
-// import Logo from '../images/Logo.jpg';
-
-// const Nav = () => {
-//   return (
-//     <nav className='flex items-center justify-between fixed top-0 w-full px-4 py-2 bg-black text-white z-10'>
-//       <div className='flex items-center'>
-//         <img className='h-20' src={Logo} alt='Logo' />
-//       </div>
-//       <button className='text-3xl hover:text-gray-400 focus:outline-none'>
-//         <i className='ti ti-menu-2'></i>
-//       </button>
-//     </nav>
-//   );
-// };
-
-// export default Nav;
-
 import React, { useState } from 'react';
 import Logo from '../images/Logo.jpg';
 
