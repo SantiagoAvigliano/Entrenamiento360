@@ -33,26 +33,30 @@ const Nav = () => {
       <ul
         className={`${
           isOpen ? 'block' : 'hidden'
-        } absolute top-24 left-0 w-full bg-black bg-opacity-75 z-20 flex flex-col justify-center items-center text-4xl`}
+        } absolute top-24 left-0 w-full bg-black bg-opacity-75 z-20 flex flex-col justify-center items-start text-4xl pl-4`}
       >
         <li className='py-4'>
-          <a href='#' className='text-white hover:text-gray-400'>
-            Home
+          <i className='ti ti-pencil'></i>
+          <a href='#' className='text-white hover:text-[#009e3a]'>
+            Registro
           </a>
         </li>
         <li className='py-4'>
-          <a href='#' className='text-white hover:text-gray-400'>
-            About Us
+          <i className='ti ti-calendar-due'></i>
+          <a href='#' className='text-white hover:text-[#009e3a]'>
+            Agenda
           </a>
         </li>
         <li className='py-4'>
-          <a href='#' className='text-white hover:text-gray-400'>
-            Services
+          <i className='ti ti-barbell'></i>
+          <a href='#' className='text-white hover:text-[#009e3a]'>
+            Control 
           </a>
         </li>
         <li className='py-4'>
-          <a href='#' className='text-white hover:text-gray-400'>
-            Contact
+          <i className='ti ti-hand-click'></i>
+          <a href='#' className='text-white hover:text-[#009e3a]'>
+            Contacto
           </a>
         </li>
       </ul>

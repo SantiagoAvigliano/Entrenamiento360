@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PicEntrenamiento2 from '../images/Entrenamiento2opacity.jpeg';
-import Info from './Info';
-import Schedule from './Schedule';
+
 
 const Main = () => {
   const [openFuncional, setOpenFuncional] = useState(false);
@@ -22,7 +21,7 @@ const Main = () => {
       className="h-[98%] flex flex-col bg-center bg-cover"
       style={{ backgroundImage: `url("${PicEntrenamiento2}")` }}
     >
-      <h1 className="text-[#009e3a] text-3xl font-extrabold mt-24 mb-4 pl-4 ">
+      <h1 className="text-[#009e3a] text-3xl font-extrabold mt-20 mb-10 pl-4 ">
         ENTRENAMIENTO 360
       </h1>
 
@@ -74,10 +73,7 @@ const Main = () => {
           )}
         </button>
       </div>        
-      <div className='h-48 w-full bg-gradient-to-t from-black to-transparent '></div>
-      <Schedule/>
-      <Info/>
-        
+      <div className='h-48 w-full bg-gradient-to-t from-black to-transparent '></div>       
     </div>   )
 }
 
