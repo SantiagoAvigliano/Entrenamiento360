@@ -21,9 +21,11 @@ const Main = () => {
       className="h-screen flex flex-col bg-center bg-cover "
       style={{ backgroundImage: `url("${PicEntrenamiento2}")` }}
     >
-      <h1 className="text-[#009e3a] text-3xl font-extrabold mt-40 mb-10 pl-4 ">
+
+      <h1 className="text-[#009e3a] font-extrabold text-3xl pl-4 pt-40 ">
         ENTRENAMIENTO 360
       </h1>
+
 
       <h3 className="text-white text-lg w-[85%] pl-4 font-semibold">
         Entrenamientos adaptados a tus necesidades y objetivos
@@ -72,8 +74,8 @@ const Main = () => {
             </p>
           )}
         </button>
-      </div>           
-    </div>   )
+      </div>
+    </div>)
 }
 
 export default Main

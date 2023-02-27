@@ -9,6 +9,7 @@ import './index.css';
 
 import Home from './pages/Home';
 import Register from './pages/Register';
+import Booking from './pages/Booking'
 
 function App() {
   
@@ -24,6 +25,10 @@ function App() {
           <Route 
             path='/registro'
             element={<Register />}  
+            />
+            <Route
+            path='/agenda'
+            element={<Booking />}
             />
           </Routes>
         
