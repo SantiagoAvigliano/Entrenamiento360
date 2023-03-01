@@ -18,11 +18,11 @@ const Main = () => {
 
   return (
     <div
-      className='h-screen flex flex-col bg-center bg-cover '
+      className='h-screen flex flex-col bg-center bg-cover justify-center '
       style={{ backgroundImage: `url("${PicEntrenamiento2}")` }}
     >
-
-      <h1 className='text-[#009e3a] font-extrabold text-3xl pl-4 pt-40 '>
+      
+      <h1 className='text-[#009e3a] font-extrabold text-3xl pl-4 '>
         ENTRENAMIENTO 360
       </h1>
 
