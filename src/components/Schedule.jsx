@@ -1,5 +1,6 @@
 import React from 'react'
 import Horarios from '../images/horarios.jpeg'
+
 const Schedule = () => {
   return (
     <div className="bg-black h-2/3"> 
