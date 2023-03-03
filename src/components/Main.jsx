@@ -47,10 +47,7 @@ const Main = () => {
           )}
           {openFuncional && (
             <p className='bg-[#009e3a] h-74 w-full absolute rounded-lg left-0 mt-6 opacity-90'>
-              Funcional, ipsum dolor sit amet consectetur adipisicing elit.
-              Debitis unde dolore, voluptatibus nesciunt provident accusantium
-              cupiditate, itaque adipisci officia, aut reprehenderit quis
-              expedita sequi totam
+              Está orientado al desarrollo físico y mental a través de programas de entrenamiento que incluyen trabajos de movilidad, capacidades coordinativas, fuerza y desarrollo energético
             </p>
           )}
         </button>
@@ -67,10 +64,7 @@ const Main = () => {
           )}
           {openDeportivo && (
             <p className='bg-[#009e3a] h-78 w-full absolute rounded-lg left-0 mt-6 opacity-90'>
-              Deportivo, ipsum dolor sit amet consectetur adipisicing elit.
-              Debitis unde dolore, voluptatibus nesciunt provident accusantium
-              cupiditate, itaque adipisci officia, aut reprehenderit quis
-              expedita sequi totam
+              Está dirigido a optimizar y potenciar el rendimiento del deportista a través de la prevención de lesiones, el desarrollo de la agilidad y las destrezas de movimiento a la par del entrenamiento de la fuerza.
             </p>
           )}
         </button>
