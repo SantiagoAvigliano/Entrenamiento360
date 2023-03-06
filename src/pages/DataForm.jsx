@@ -22,7 +22,7 @@ const [comentarios, setComentarios] = useState('')
 
     const form = async () => {
         try {
-          const res = await fetch("http://localhost:4000/user", {
+          const res = await fetch("http://localhost:4000/user/{id}", {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
@@ -114,65 +114,153 @@ const [comentarios, setComentarios] = useState('')
                 </Link>
                 
             </div>
-            <form className='bg-[#21683c] text-white text-xl px-4' action=''>
+            <form onSubmit={form} className='bg-[#21683c] text-white text-xl px-4' action=''>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold'>Nombre completo:</label>
-                    <input type='text' placeholder='Nombre y apellido' className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <input 
+                        name='nombre'
+                        id='nombre'
+                        value={nombre}
+                        onChange={onChangeName}
+                        type='text' 
+                        placeholder='Nombre y apellido' 
+                        className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col' >
                     <label htmlFor='' className='font-bold' >Celular:</label>
-                    <input type='number' placeholder='09XXXXXXX' className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <input
+                        name='celular'
+                        id='celular'
+                        value={celular}
+                        onChange={onChangeCelular} 
+                        type='number' 
+                        placeholder='09XXXXXXX' 
+                        className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold'>Email:</label>
-                    <input type='email' placeholder='p. ej.  360@email.com' className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <input 
+                        name='email'
+                        id='email'
+                        value={email}
+                        onChange={onChangeEmail}
+                        type='email' 
+                        placeholder='p. ej.  360@email.com' 
+                        className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold'>Ocupación:</label>
-                    <input type='text'  placeholder='p. ej. Empleado' className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <input 
+                        name='ocupacion'
+                        id='ocupacion'
+                        value={ocupacion}
+                        onChange={onChangeOcupacion}
+                        type='text'  
+                        placeholder='p. ej. Empleado' 
+                        className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold' >Años de actividad fisica:</label>
-                    <textarea className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <textarea 
+                        name='anios_actividad'
+                        id='anios_actividad'
+                        value={anios_actividad}
+                        onChange={onChangeAnios_actividad}
+                        className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold' >Historial deportivo:</label>
-                    <textarea className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <textarea
+                        name='historial_deportivo'
+                        id='historial_deportivo'
+                        value={historial_deportivo}
+                        onChange={onChangeHistorial_deportivo} 
+                        className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold' >Historial de lesiones:</label>
-                    <textarea className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <textarea 
+                        name='historial_lesiones'
+                        id='historial_lesiones'
+                        value={historial_lesiones}
+                        onChange={onChangeHistorial_lesiones}
+                        className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold' >Lesiones o molestias actuales:</label>
-                    <textarea className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <textarea
+                        name='lesiones_actuales'
+                        id='lesiones_actuales'
+                        value={lesiones_actuales}
+                        onChange={onChangeLesiones_actuales} 
+                        className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold' >Cobertura medica:</label>
-                    <input type='text' placeholder='p. ej. Casmu'className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <input
+                        name='cobertura_medica'
+                        id='cobertura_medica'
+                        value={cobertura_medica}
+                        onChange={onChangeCobertura_medica} 
+                        type='text' 
+                        placeholder='p. ej. Casmu'
+                        className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold'>Servicio de emergencia:</label>
-                    <input type='text' placeholder='p. ej. Suat' className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <input
+                        name='servicio_emergencia'
+                        id='servicio_emergencia'
+                        value={servicio_emergencia}
+                        onChange={onChangeServicio_emergencia} 
+                        type='text' 
+                        placeholder='p. ej. Suat' 
+                        className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold' >Contacto de emergencia:</label>
-                    <input type='number' placeholder='p. ej. Número de algún familiar' className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <input 
+                        name='contacto_emergencia'
+                        id='contacto_emergencia'
+                        value={contacto_emergencia}
+                        onChange={onChangeContacto_emergencia}
+                        type='number'  
+                        placeholder='p. ej. Número de algún familiar' 
+                        className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold' >Objetivos y motivaciones:</label>
-                    <textarea  className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <textarea
+                        name='objetivos'
+                        id='objetivos'
+                        value={objetivos}
+                        onChange={onChangeObjetivos}  
+                        className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold'>Frecuencia en 360:</label>
-                    <input placeholder='p. ej. Tres veces a la semana' type='text' className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <input
+                        name='frecuencia_360'
+                        id='frecuencia_360'
+                        value={frecuencia_360}
+                        onChange={onChangeFrecuencia_360}
+                        placeholder='p. ej. Tres veces a la semana' 
+                        type='text' 
+                        className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold' >Comentarios:</label>
-                    <textarea  className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
+                    <textarea
+                        name='comentarios'
+                        id='comentarios'
+                        value={comentarios}
+                        onChange={onChangeComentarios}
+                        className='text-black w-full h-[7rem] md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex justify-center items-center py-4'>
-                    <button  className='bg-[#0d3b1e] w-32 font-bold hover:text-[#009e3a] hover:bg-[#104423] text-slate  rounded-md px-5 py-[5px] shadow-md hover:shadow-4xl'>Enviar</button>
+                    <button 
+                        onClick={onClick}  
+                        className='bg-[#0d3b1e] w-32 font-bold hover:text-[#009e3a] hover:bg-[#104423] text-slate  rounded-md px-5 py-[5px] shadow-md hover:shadow-4xl'>Enviar</button>
                 </div>
             </form>
         </div>

@@ -10,6 +10,7 @@ import './index.css';
 import Home from './pages/Home';
 import DataForm from './pages/DataForm';
 import Booking from './pages/Booking'
+import Login from './pages/Login';
 
 function App() {
   
@@ -29,6 +30,10 @@ function App() {
             <Route
             path='/agenda'
             element={<Booking />}
+            />
+            <Route
+            path='/login'
+            element={<Login />}
             />
           </Routes>
         

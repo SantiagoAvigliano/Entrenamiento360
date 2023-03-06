@@ -13,9 +13,11 @@ const Nav = () => {
   return (
     <nav className='fixed flex items-center justify-between w-full h-24 px-4 py-2 bg-black text-white'>
       <div className='flex items-center'>
+        
         <Link to={`/`}>
           <img className='h-20' src={Logo} alt='Logo 360' />
         </Link>
+       
       </div>
       <button
         className='text-3xl hover:text-[#009e3a] focus:outline-none lg:hidden'
@@ -36,6 +38,14 @@ const Nav = () => {
         className={`${isOpen ? "block" : "hidden"
           } absolute top-24 left-0 w-full bg-black bg-opacity-75 z-20 flex flex-col justify-center items-start text-xl pl-4`}
       >
+        <Link to={'/login'}>
+          <li className='py-4'>
+            <a href="#" className='text-white hover:text-[#009e3a]'>
+              <i className="ti ti-user pr-2"></i>
+              Inicio de sesión
+            </a>
+          </li>
+        </Link>
         <Link to={'/'}>
           <li className='py-4'>
             <a href="#" className='text-white hover:text-[#009e3a]'>
