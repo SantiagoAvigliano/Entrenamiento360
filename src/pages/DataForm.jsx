@@ -1,9 +1,110 @@
-import React from 'react'
+import {useState} from 'react'
 import { Link } from 'react-router-dom';
 import '../index.css';
 import Nav from '../components/Nav'
 
-const Register = () => {
+const DataForm = () => {
+const [nombre, setNombre] = useState('')
+const [email, setEmail] = useState('')
+const [celular, setCelular] = useState('')
+const [ocupacion, setOcupacion] = useState('')
+const [anios_actividad, setAnios_actividad] = useState('')
+const [historial_deportivo, setHistorial_deportivo] = useState('')
+const [historial_lesiones, setHistorial_lesiones] = useState('')
+const [lesiones_actuales, setLesiones_actuales] = useState('')
+const [cobertura_medica, setCobertura_medica] = useState('')
+const [servicio_emergencia, setServicio_emergencia] = useState('')
+const [contacto_emergencia, setContacto_emergencia] = useState('')
+const [objetivos, setObjetivos] = useState('')
+const [frecuencia_360, setFrecuencia_360] = useState('')
+const [comentarios, setComentarios] = useState('')
+
+
+    const form = async () => {
+        try {
+          const res = await fetch("http://localhost:4000/user", {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+              "auth-token": localStorage.getItem("jwt"),
+            },
+            body: JSON.stringify({
+               
+                nombre: nombre,
+                email: email,
+                celular: celular,
+                ocupacion: ocupacion,
+                anios_actividad: anios_actividad,
+                historial_deportivo: historial_deportivo,
+                historial_lesiones: historial_lesiones,
+                lesiones_actuales: lesiones_actuales,
+                cobertura_medica: cobertura_medica,
+                servicio_emergencia: servicio_emergencia,
+                contacto_emergencia: contacto_emergencia,
+                objetivos: objetivos,
+                frecuencia_360: frecuencia_360,
+                comentarios: comentarios
+            
+            })
+          });
+          if (!res.ok) {
+            throw new Error("invalid data ");
+          }
+          
+        } catch (error) {
+          console.log("Error");
+          alert("Todos los datos son obligatorios");
+        }
+        }
+    
+    
+    
+      const onClick = (e) => {
+        form();
+      };
+      const onChangeName = (e) => {
+        setNombre(e.target.value);
+      };
+      const onChangeEmail = (e) => {
+        setEmail(e.target.value);
+      };
+      const onChangeCelular = (e) => {
+        setCelular(e.target.value);
+      };
+      const onChangeOcupacion = (e) => {
+        setOcupacion(e.target.value);
+      };
+      const onChangeAnios_actividad = (e) => {
+        setAnios_actividad(e.target.value);
+      };
+      const onChangeHistorial_deportivo = (e) => {
+        setHistorial_deportivo(e.target.value);
+      };
+      const onChangeHistorial_lesiones = (e) => {
+        setHistorial_lesiones(e.target.name);
+      };
+      const onChangeLesiones_actuales = (e) => {
+        setLesiones_actuales(e.target.name);
+      };
+      const onChangeCobertura_medica = (e) => {
+        setCobertura_medica(e.target.value);
+      };
+      const onChangeServicio_emergencia = (e) => {
+        setServicio_emergencia(e.target.value);
+      };
+      const onChangeContacto_emergencia = (e) => {
+        setContacto_emergencia(e.target.value);
+      };
+      const onChangeObjetivos = (e) => {
+        setObjetivos(e.target.value);
+      };
+      const onChangeFrecuencia_360 = (e) => {
+        setFrecuencia_360(e.target.value);
+      };
+      const onChangeComentarios = (e) => {
+        setComentarios(e.target.value);
+      };
+
     return (
         <div>
             <Nav />
@@ -17,10 +118,6 @@ const Register = () => {
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold'>Nombre completo:</label>
                     <input type='text' placeholder='Nombre y apellido' className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
-                </div>
-                <div className='flex flex-col'>
-                    <label htmlFor='' className='font-bold' >Cedula de Identidad:</label>
-                    <input type='number' placeholder='Sin puntos ni guiones' className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col' >
                     <label htmlFor='' className='font-bold' >Celular:</label>
@@ -82,4 +179,4 @@ const Register = () => {
     )
 }
 
-export default Register
+export default DataForm

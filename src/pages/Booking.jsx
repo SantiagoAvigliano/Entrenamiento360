@@ -30,7 +30,6 @@ const Booking = () => {
           <option value='8:00'>8:00</option>
           <option value='9:00'>9:00</option>
           <option value='10:00'>10:00</option>
-          <option value='11:00'>11:00</option>
           <option value='16:00'>16:00</option>
           <option value='17:00'>17:00</option>
           <option value='18:00'>18:00</option>

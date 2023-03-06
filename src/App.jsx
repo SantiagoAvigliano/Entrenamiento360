@@ -8,7 +8,7 @@ import {
 import './index.css';
 
 import Home from './pages/Home';
-import Register from './pages/Register';
+import DataForm from './pages/DataForm';
 import Booking from './pages/Booking'
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
             element={<Home />}
           />   
           <Route 
-            path='/registro'
-            element={<Register />}  
+            path='/formulario'
+            element={<DataForm />}  
             />
             <Route
             path='/agenda'

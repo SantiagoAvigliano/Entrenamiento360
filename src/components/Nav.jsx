@@ -44,7 +44,7 @@ const Nav = () => {
             </a>
           </li>
         </Link>
-        <Link to={'/registro'}>
+        <Link to={'/formulario'}>
           <li className='py-4'>
             <a href="#" className='text-white hover:text-[#009e3a]'>
               <i className='ti ti-pencil pr-2'></i>
