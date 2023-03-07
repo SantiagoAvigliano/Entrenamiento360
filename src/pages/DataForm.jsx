@@ -81,10 +81,10 @@ const [comentarios, setComentarios] = useState('')
         setHistorial_deportivo(e.target.value);
       };
       const onChangeHistorial_lesiones = (e) => {
-        setHistorial_lesiones(e.target.name);
+        setHistorial_lesiones(e.target.value);
       };
       const onChangeLesiones_actuales = (e) => {
-        setLesiones_actuales(e.target.name);
+        setLesiones_actuales(e.target.value);
       };
       const onChangeCobertura_medica = (e) => {
         setCobertura_medica(e.target.value);
@@ -108,7 +108,7 @@ const [comentarios, setComentarios] = useState('')
     return (
         <div>
             <Nav />
-            <div className='flex items-center pt-28 py-2 bg-[#0c7034]'>
+            <div className='flex items-center pt-28 py-2 bg-[#21683c]'>
                 <Link to={`/`}>
                     <i className='fa-solid flex text-white hover:text-[#104423] text-[35px] ti ti-arrow-left ml-4 mr-[10px]'></i>
                 </Link>
