@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Nav from '../components/Nav';
 
 const Register = () => {
   const [cedula, setCedula] = useState('');
@@ -43,26 +44,50 @@ const Register = () => {
   }
 
   return (
-    <form onSubmit={handleRegister}>
-      {error && <p>{error}</p>}
-      <label>
-        Cedula:
-        <input type="text" value={cedula} onChange={(e) => setCedula(e.target.value)} />
-      </label>
-      <label>
-        Correo electrónico:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </label>
-      <label>
-        Contraseña:
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </label>
-      <label>
-        Confirmar contraseña:
-        <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-      </label>
-      <button type="submit">Registrarse</button>
-    </form>
+    <div>
+      <Nav />
+      
+      <form className='bg-[#0c7034] h-screen flex flex-col justify-start text-white text-xl pt-40 px-4' onSubmit={handleRegister}>
+        {error && <p>{error}</p>}
+        <label className='font-bold'>
+          Cedula:
+          <input
+            className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-xl hover:shadow-2xl'
+            type="text"
+            value={cedula}
+            onChange={(e) => setCedula(e.target.value)} />
+        </label>
+        <label className='font-bold'>
+          Correo electrónico:
+          <input
+            className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-xl hover:shadow-2xl'
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} />
+        </label>
+        <label className='font-bold'>
+          Contraseña:
+          <input
+            className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-xl hover:shadow-2xl'
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)} />
+        </label>
+        <label className='font-bold'>
+          Confirmar contraseña:
+          <input
+            className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-xl hover:shadow-2xl'
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)} />
+        </label>
+        <div className='flex justify-center pt-8'>
+          <button
+            className='bg-[#0d3b1e] w-32 font-bold hover:text-[#009e3a] hover:bg-[#104423] text-lg text-slate  rounded-md px-5 py-[5px] shadow-md hover:shadow-4xl'
+            type="submit">Registrate</button>
+        </div>
+      </form>
+    </div>
   );
 }
 

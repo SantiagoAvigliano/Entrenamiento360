@@ -108,13 +108,13 @@ const [comentarios, setComentarios] = useState('')
     return (
         <div>
             <Nav />
-            <div className='flex items-center pt-28 py-2 bg-[#21683c]'>
+            <div className='flex items-center pt-28 py-2 bg-[#0c7034]'>
                 <Link to={`/`}>
                     <i className='fa-solid flex text-white hover:text-[#104423] text-[35px] ti ti-arrow-left ml-4 mr-[10px]'></i>
                 </Link>
                 
             </div>
-            <form onSubmit={form} className='bg-[#21683c] text-white text-xl px-4' action=''>
+            <form onSubmit={form} className='bg-[#0c7034] text-white text-xl px-4' action=''>
                 <div className='flex flex-col'>
                     <label htmlFor='' className='font-bold'>Nombre completo:</label>
                     <input 

@@ -23,7 +23,7 @@ const Booking = () => {
   return (
     <div>
       <Nav />
-      <form onSubmit={handleSubmit} className='bg-[#21683c] flex flex-col h-screen text-white justify-start pt-48 px-4'>
+      <form onSubmit={handleSubmit} className='bg-[#0c7034] flex flex-col h-screen text-white justify-start pt-48 px-4'>
         <label className='text-2xl font-bold'>Seleccioná el horario:</label> 
         <select value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)} className='h-10 tet-xl text-black rounded-md bg-white font-semibold my-6 pl-4'>
           <option value=''>Seleccione una hora</option>
