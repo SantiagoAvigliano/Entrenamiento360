@@ -108,7 +108,7 @@ const [comentarios, setComentarios] = useState('')
     return (
         <div>
             <Nav />
-            <div className='flex items-center pt-28 py-2 bg-[#21683c]'>
+            <div className='flex items-center pt-28 py-2 bg-[#0c7034]'>
                 <Link to={`/`}>
                     <i className='fa-solid flex text-white hover:text-[#104423] text-[35px] ti ti-arrow-left ml-4 mr-[10px]'></i>
                 </Link>

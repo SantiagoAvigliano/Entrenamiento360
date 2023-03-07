@@ -42,7 +42,15 @@ const Nav = () => {
           <li className='py-4'>
             <a href="#" className='text-white hover:text-[#009e3a]'>
               <i className="ti ti-user pr-2"></i>
-              Inicio de sesión
+              Iniciar sesión
+            </a>
+          </li>
+        </Link>
+        <Link to={'/formulario'}>
+          <li className='py-4'>
+            <a href="#" className='text-white hover:text-[#009e3a]'>
+              <i className='ti ti-pencil pr-2'></i>
+              Ingresar datos
             </a>
           </li>
         </Link>
@@ -51,14 +59,6 @@ const Nav = () => {
             <a href="#" className='text-white hover:text-[#009e3a]'>
               <i className='ti ti-home pr-2'></i>
               Home
-            </a>
-          </li>
-        </Link>
-        <Link to={'/formulario'}>
-          <li className='py-4'>
-            <a href="#" className='text-white hover:text-[#009e3a]'>
-              <i className='ti ti-pencil pr-2'></i>
-              Registro
             </a>
           </li>
         </Link>
