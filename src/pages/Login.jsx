@@ -39,18 +39,21 @@ function Login() {
             <div className='bg-[#0c7034] h-screen flex flex-col justify-start text-white text-xl pt-40 px-4'>
                 <div className='pb-12'>
                     <p className='text-2xl font-bold'>Bienvenido</p>
-                    <p>Iniciá sesión para continuar</p>
+                    <p className='pt-2'>Iniciá sesión para continuar</p>
                 </div>
                 <form
                     className='flex flex-col'
                     onSubmit={handleLogin}>
                     {error && <p>{error}</p>}
                     <label htmlFor='' className='font-bold '>
-                        Cédula:
+                        C. I. :
                     </label>
                     <input
                         className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-xl hover:shadow-2xl' 
-                        type="text" value={cedula} onChange={(e) => setCedula(e.target.value)} />
+                        type="text" 
+                        value={cedula} 
+                        placeholder='Sin puntos ni guiones'
+                        onChange={(e) => setCedula(e.target.value)} />
                     <label className='font-bold '>
                         Contraseña:
                     </label>

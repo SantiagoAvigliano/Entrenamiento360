@@ -65,9 +65,6 @@ const [comentarios, setComentarios] = useState('')
       const onChangeName = (e) => {
         setNombre(e.target.value);
       };
-      const onChangeEmail = (e) => {
-        setEmail(e.target.value);
-      };
       const onChangeCelular = (e) => {
         setCelular(e.target.value);
       };
@@ -135,17 +132,6 @@ const [comentarios, setComentarios] = useState('')
                         onChange={onChangeCelular} 
                         type='number' 
                         placeholder='09XXXXXXX' 
-                        className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
-                </div>
-                <div className='flex flex-col'>
-                    <label htmlFor='' className='font-bold'>Email:</label>
-                    <input 
-                        name='email'
-                        id='email'
-                        value={email}
-                        onChange={onChangeEmail}
-                        type='email' 
-                        placeholder='p. ej.  360@email.com' 
                         className='text-black w-full md:w-[500px] pl-[20px] bg-[#f7f7f9] mt-[10px] mb-[10px] rounded-md py-[5px] shadow-md hover:shadow-xl' />
                 </div>
                 <div className='flex flex-col'>
