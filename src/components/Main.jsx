@@ -22,9 +22,7 @@ const Main = () => {
       style={{ backgroundImage: `url("${PicEntrenamiento2}")` }}
     >
       
-      <h1 className='text-[#009e3a] font-extrabold text-3xl pl-4 '>
-        ENTRENAMIENTO 360
-      </h1>
+     
 
 
       <h3 className='text-white text-lg w-[85%] pl-4 font-semibold'>
