@@ -19,6 +19,9 @@ const Nav = () => {
         </Link>
        
       </div>
+      <h1 className='text-[#009e3a] font-bold round-full text-xl pl-3 '>
+        
+      </h1>
       <button
         className='text-3xl hover:text-[#009e3a] focus:outline-none lg:hidden'
         onClick={handleToggle}
@@ -50,7 +53,7 @@ const Nav = () => {
           <li className='py-4'>
             <a href="#" className='text-white hover:text-[#009e3a]'>
               <i className='ti ti-pencil pr-2'></i>
-              Ingresar datos
+              Mi Perfil
             </a>
           </li>
         </Link>

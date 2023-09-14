@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PicEntrenamiento2 from '../images/Entrenamiento2opacity.jpeg';
+import PicEntrenamiento212 from '../images/Entrenamiento212.jpeg';
 
 
 const Main = () => {
@@ -18,14 +18,11 @@ const Main = () => {
 
   return (
     <div
-      className='h-screen flex flex-col bg-center bg-cover justify-center '
-      style={{ backgroundImage: `url("${PicEntrenamiento2}")` }}
-    >
-      
-     
+      className='h-screen flex flex-col bg-center bg-cover justify-center'
+      style={{ backgroundImage: `url("${PicEntrenamiento212}")` }}    >
 
-
-      <h3 className='text-white text-lg w-[85%] pl-4 font-semibold'>
+    
+      <h3 className='text-white text-lg w-[85%] pl-4 text-center font-semibold'>
         Entrenamientos adaptados a tus necesidades y objetivos
       </h3>
       <h4 className='text-white text-lg w-[85%] pl-4 mt-4 text-center font-semibold'>
