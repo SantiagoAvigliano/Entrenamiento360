@@ -39,22 +39,25 @@ const Nav = () => {
       </button>
       <ul
         className={`${isOpen ? "block" : "hidden"
-          } absolute top-24 left-0 w-full bg-black bg-opacity-75 z-20 flex flex-col justify-center items-start text-xl pl-4`}
+          } absolute top-24 left-0 w-full z-20 bg-black bg-opacity-95 flex flex-col justify-center items-start text-xl pl-4`}
       >
         <Link to={'/login'}>
-          <li className='py-4'>
-            <a href="#" className='text-white hover:text-[#009e3a]'>
+          <li className='py-4 text-white hover:text-2xl'>
+          <a href="#" className='text-white hover:text-[#009e3a]'>
+          
               <i className="ti ti-user pr-2"></i>
               Iniciar sesión
-            </a>
+              </a>
           </li>
+            
+          
         </Link>
         <Link to={'/formulario'}>
           <li className='py-4'>
-            <a href="#" className='text-white hover:text-[#009e3a]'>
+            
               <i className='ti ti-pencil pr-2'></i>
               Mi Perfil
-            </a>
+            
           </li>
         </Link>
         <Link to={'/'}>
